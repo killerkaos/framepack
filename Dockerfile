@@ -15,6 +15,14 @@ RUN apt-get update \
 	wget \
 	git \
 	libxml2 \
+        libgl1 \
+        libglib2.0-0 \
+        libsm6 \
+        libxrender1 \
+        libxext6 \
+        ninja-build \
+        sudo \
+        && rm -rf /var/lib/apt/lists/* \
 	&& apt-get clean
 
 # add install bash script

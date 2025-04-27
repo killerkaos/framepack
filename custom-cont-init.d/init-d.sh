@@ -11,7 +11,7 @@ echo "=========================================" > /proc/1/fd/1
 echo "INSTALLER script" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 if [ ! -f /home/abc/installed ]; then
-    wget https://raw.githubusercontent.com/killerkaos/vicuna/main/installer.sh > /proc/1/fd/1
+    wget https://raw.githubusercontent.com/killerkaos/framepack/main/installer.sh > /proc/1/fd/1
     bash installer.sh
     rm -f installer.sh
 else
@@ -22,7 +22,7 @@ fi
 echo "=========================================" > /proc/1/fd/1
 echo "STARTUP python server script" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-wget https://raw.githubusercontent.com/killerkaos/vicuna/main/startup.sh > /proc/1/fd/1
+wget https://raw.githubusercontent.com/killerkaos/framepack/main/startup.sh > /proc/1/fd/1
 bash startup.sh
 
 exec "$@"

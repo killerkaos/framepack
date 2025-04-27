@@ -21,7 +21,7 @@ echo "DEPENDENCIES ALL INSTALLED" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 fi
 
-if [ ! -d /config/framepack ]; then
+if [ ! -d /config/FramePack ]; then
 echo "=========================================" > /proc/1/fd/1
 echo "INSTALLING & Downloading framepack" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1

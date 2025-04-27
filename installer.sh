@@ -15,6 +15,7 @@ echo "=========================================" > /proc/1/fd/1
 echo "INSTALLING DEPENDENCIES: Torch torchvision torchaudio cuda126 (WILL TAKE A LONG TIME)" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 > /proc/1/fd/1
+    conda install -y -c "nvidia/label/cuda-12.6.0" cuda-runtime -y > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 echo "DEPENDENCIES ALL INSTALLED" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1

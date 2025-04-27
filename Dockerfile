@@ -32,10 +32,9 @@ COPY custom-cont-init.d /custom-cont-init.d/
 RUN chmod +x /custom-cont-init.d/init-d.sh
     
 # global environment settings
-ENV XDG_CONFIG_HOME=/home/abc
-ENV HOME=/home/abc
-RUN mkdir /home/abc && \
-    chown -R abc:abc /home/abc
+ENV XDG_CONFIG_HOME=/config
+ENV HOME=/config
+RUN chown -R abc:abc /config
   
 # Download latest of miniconda3
 RUN cd /tmp \

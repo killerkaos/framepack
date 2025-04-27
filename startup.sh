@@ -8,4 +8,4 @@ echo "=========================================" > /proc/1/fd/1
 echo "EXECUTING GRADIO SERVER" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 cd /config/FramePack
-python demo_gradio.py --share --server 0.0.0.0 --port 7860 > /proc/1/fd/1
+python demo_gradio.py > /proc/1/fd/1

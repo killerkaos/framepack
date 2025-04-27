@@ -2,32 +2,23 @@
 conda init bash > /proc/1/fd/1
 source ~/.bashrc
 
-if [ ! -d /home/abc/vicuna ]; then
+if [ ! -d /home/abc/framepack ]; then
 echo "=========================================" > /proc/1/fd/1
-echo "CONDA CREATE vicuna" > /proc/1/fd/1
+echo "CONDA CREATE FRAMEPACK" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-    conda create -p /home/abc/vicuna python=3.11 -y > /proc/1/fd/1
+    conda create -p /home/abc/framepack python=3.10 -y > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-echo "CONDA ACTIVATE vicuna" > /proc/1/fd/1
+echo "CONDA ACTIVATE FRAMEPACK" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-    conda activate /home/abc/vicuna > /proc/1/fd/1
+    conda activate /home/abc/framepack > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-echo "INSTALLING DEPENDENCIES: Torch, cudatoolkit & protobuf (WILL TAKE A LONG TIME)" > /proc/1/fd/1
+echo "INSTALLING DEPENDENCIES: Torch torchvision torchaudio cuda126 (WILL TAKE A LONG TIME)" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 > /proc/1/fd/1
-    conda install -y -c "nvidia/label/cuda-12.1.1" cuda-runtime -y > /proc/1/fd/1
-    pip install protobuf==3.20 > /proc/1/fd/1
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 echo "DEPENDENCIES ALL INSTALLED" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
 fi
-
-echo "=========================================" > /proc/1/fd/1
-echo "SETUP CUDA HOME & REACTIVATE vicuna" > /proc/1/fd/1
-echo "=========================================" > /proc/1/fd/1
-conda env config vars set CUDA_HOME="/home/abc/vicuna" > /proc/1/fd/1
-conda deactivate > /proc/1/fd/1
-conda activate /home/abc/vicuna > /proc/1/fd/1
 
 if [ ! -d /home/abc/text-generation-webui ]; then
 echo "=========================================" > /proc/1/fd/1

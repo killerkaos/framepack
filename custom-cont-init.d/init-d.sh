@@ -15,7 +15,7 @@ if [ ! -f /home/abc/installed ]; then
     bash installer.sh
     rm -f installer.sh
 else
-    echo "Vicuna installed, skip installer" > /proc/1/fd/1
+    echo "Framepack installed, skip installer" > /proc/1/fd/1
 fi
 
 # Execute Startup script

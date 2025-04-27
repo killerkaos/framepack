@@ -2,7 +2,6 @@
 
 # permissions
 echo "chown'ing directory to ensure correct permissions."
-chown -R abc:abc /home/abc
 chown -R abc:abc /config
 echo "Done!"
 
@@ -10,7 +9,7 @@ echo "Done!"
 echo "=========================================" > /proc/1/fd/1
 echo "INSTALLER script" > /proc/1/fd/1
 echo "=========================================" > /proc/1/fd/1
-if [ ! -f /home/abc/installed ]; then
+if [ ! -f /config/installed ]; then
     wget https://raw.githubusercontent.com/killerkaos/framepack/refs/heads/main/installer.sh > /proc/1/fd/1
     bash installer.sh
     rm -f installer.sh
